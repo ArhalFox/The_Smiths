@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --vermelho-paulinho: rgb(38, 3, 85);
+    --vermelho-claro: #8b0675b2;
+    --roxo-link: #2f016b;
+    --preto-insano: #000000;
+    --cinza-transparente: #f5f5f57c;
+    --laranja-claro: #fff0ff;
+
+    /* Novas variáveis para alto contraste */
+    --alto-contraste-fundo: #910272;
+    --alto-contraste-texto: #FFFFFF;
+    --alto-contraste-link: #070704;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(var(--vermelho-claro), var(--vermelho-paulinho));
+    color: #fff;
+}
+
+header {
+    background: radial-gradient(#780283da, rgb(41, 1, 46));
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+/* ---------------- NAV ----------------- */
+.nav-link {
+    color: var(--red-link);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--laranja-claro);
+    text-decoration: underline;
+}
+
+/* ---------------- INÍCIO ----------------- */
+.inicio-fundo {
+    background-image: url('img/4965007.jpg');
+    background-size: cover;
+    background-position: right;
+    border-radius: 80px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 45rem;
+    height: auto;
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.botao-inicio {
+    background-color: var(--preto-insano);
+    color: #b700ff;
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-inicio:hover {
+    background-color: var(--laranja-claro);
+    color: #000;
+}
+
+.display-4 {
+    text-shadow: -5px 5px var(--preto-insano);
+}
+
+/* ---------------- TROPICALIA (SEÇÃO PAULINHO) ----------------- */
+#tropicalia {
+    position: relative;
+    padding-top: 5rem;
+    margin: 3rem 0;
+    background: url('img/flor.png') top right no-repeat,
+                url('img/flor-esquerda.png') bottom left no-repeat;
+    background-size: 180px 180px;
+}
+
+#tropicalia .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    color: var(--laranja-claro);
+}
+
+/* ---------------- GALERIA ----------------- */
+#galeria {
+    background-color: rgba(7, 0, 0, 0.27);
+}
+
+.fundo-galeria {
+    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+    background-size: 180px 180px;
+}
+
+/* ---------------- CONTATO ----------------- */
+#contato {
+    background-image: url('img/fundo\ 1.jpg');
+    background-size: cover;
+    padding: 4rem 0;
+}
+
+.formulario {
+    background-color: var(--cinza-transparente);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    color: #000;
+}
+
+.formulario button {
+    background-color: var(--preto-insano);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: var(--laranja-claro);
+    color: #96128f;
+}
+
+.form-control {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+/* ---------------- ACESSIBILIDADE ----------------- */
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.apresenta-lista {
+    display: none;
+}
+
+/* --------- NOVO: Alto contraste --------- */
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
+}
+
+/* ---------------- FOOTER ----------------- */
+footer {
+    background-color: #5f075871;
+    color: var(--laranja-claro);
+    border-top: 3px solid var(--vermelho-paulinho);
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Lemon', serif;
+}
+
+footer i {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    transition: 0.3s;
+}
+
+footer i:hover {
+    color: #fff;
+}
